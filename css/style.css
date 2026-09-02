@@ -329,6 +329,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .about-copy p { color: var(--text-secondary); margin-bottom: 1.1rem; }
 .about-copy p:last-child { margin-bottom: 0; }
+.about-side { display: grid; gap: 1.5rem; align-content: start; }
+.about-photo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  aspect-ratio: 640 / 822;
+  object-fit: cover;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  justify-self: start;
+}
 .about-facts {
   display: grid;
   gap: 1.1rem;
