@@ -1,11 +1,14 @@
 /**
  * Project data.
  *
- * HOW TO EDIT: replace the placeholder values below (anything in [BRACKETS])
- * with your real project information, then delete entries you don't need or
- * add more by copying the object shape. Do not remove any fields — main.js
- * expects all of them to exist (use an empty string or `null` if something
- * genuinely doesn't apply).
+ * PROJECTS starts empty on purpose — showing fabricated example cards on a
+ * live page reads as fake. Until real projects are added, the Projects
+ * section renders an honest empty state instead (see renderProjects below).
+ *
+ * HOW TO ADD A PROJECT: copy the shape of EXAMPLE_PROJECT below into the
+ * PROJECTS array and fill in real values. Every field is required (use ""
+ * or `null` if something genuinely doesn't apply) — main.js expects all of
+ * them to exist.
  *
  * Fields:
  *   name        — project name.
@@ -20,43 +23,33 @@
  *   status      — e.g. "In Production", "In Development", "Maintained".
  *   link        — GitHub URL, only used (and only shown) when visibility
  *                 is "Public". Leave as null for Private/Internal projects.
+ *
+ * const EXAMPLE_PROJECT = {
+ *   name: "Project Name",
+ *   visibility: "Public",
+ *   description: "What it does and who it's for, in plain language.",
+ *   role: "e.g. Backend Developer, Project Lead",
+ *   tech: ["Laravel", "PHP", "SQL", "AWS EC2", "Ubuntu"],
+ *   focus: "e.g. API design, database structure, deployment pipeline",
+ *   status: "e.g. In Production",
+ *   link: "https://github.com/maruf3535/project-name",
+ * };
  */
-const PROJECTS = [
-  {
-    name: "[Add Project Name]",
-    visibility: "Public",
-    description: "[Add a short, honest description of what this project does and who it's for.]",
-    role: "[Add your role — e.g. Backend Developer, Project Lead]",
-    tech: ["Laravel", "PHP", "SQL", "AWS EC2", "Ubuntu"],
-    focus: "[Describe the architecture or engineering focus — e.g. API design, database structure, deployment pipeline]",
-    status: "[e.g. In Production]",
-    link: "[ADD GITHUB LINK]",
-  },
-  {
-    name: "[Add Project Name]",
-    visibility: "Private",
-    description: "[Add a general description that doesn't expose confidential details — the type of system and the problem it solves.]",
-    role: "[Add your role]",
-    tech: ["Flutter", "Dart", "Laravel", "SQL"],
-    focus: "[Describe your engineering focus without revealing confidential information]",
-    status: "[Add status]",
-    link: null,
-  },
-  {
-    name: "[Add Project Name]",
-    visibility: "Internal",
-    description: "[Add description — e.g. an internal tool or system built for a team]",
-    role: "[Add your role]",
-    tech: ["Laravel", "SQL", "Linux", "AWS"],
-    focus: "[Describe the engineering focus of this internal system]",
-    status: "[Add status]",
-    link: null,
-  },
-];
+const PROJECTS = [];
 
 function renderProjects() {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
+
+  if (PROJECTS.length === 0) {
+    grid.innerHTML = `
+      <div class="projects-empty reveal">
+        <p>Project write-ups are in progress.</p>
+        <p>In the meantime, <a href="https://github.com/maruf3535" target="_blank" rel="noopener noreferrer">GitHub</a> has the most accurate picture of ongoing and past work.</p>
+      </div>
+    `;
+    return;
+  }
 
   const badgeClass = {
     Public: "badge-public",

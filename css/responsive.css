@@ -26,12 +26,6 @@
   .stack-card-learning { grid-column: 1 / -1; }
 
   .projects-grid { grid-template-columns: repeat(3, 1fr); }
-
-  .focus-flow { flex-direction: row; align-items: stretch; }
-  .focus-node { flex: 1; flex-direction: column; text-align: center; gap: 0.5rem; padding: 1.4rem 1rem; }
-  .connector { padding-left: 0; padding-inline: 0.25rem; }
-  .arrow-v { display: none; }
-  .arrow-h { display: inline; }
 }
 
 /* ---------- Large desktop: 1200px+ ---------- */

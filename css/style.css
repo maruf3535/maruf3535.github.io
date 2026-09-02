@@ -286,9 +286,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   border-color: color-mix(in srgb, var(--exploring) 45%, var(--border));
   background: var(--exploring-soft);
 }
-.chip-flow { color: var(--text-primary); }
-.flow-arrow { color: var(--text-tertiary); font-family: var(--font-mono); }
-
 .badge {
   display: inline-block;
   font-family: var(--font-mono);
@@ -425,33 +422,20 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .project-link { font-size: 0.86rem; font-weight: 600; color: var(--accent-strong); }
 .project-link:hover { text-decoration: underline; }
 .project-restricted { font-size: 0.82rem; color: var(--text-tertiary); font-style: italic; }
-.projects-note { margin-top: 2.5rem; font-size: 0.88rem; color: var(--text-tertiary); }
-.projects-note code { font-family: var(--font-mono); background: var(--bg-inset); border: 1px solid var(--border); border-radius: 3px; padding: 0.1rem 0.35rem; }
 
-/* ---------- Focus / expansion flow ---------- */
-.focus-flow {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.focus-node {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  border: 1px solid var(--border);
-  background: var(--bg-raised);
+.projects-empty {
+  grid-column: 1 / -1;
+  border: 1px dashed var(--border-strong);
   border-radius: var(--radius-md);
-  padding: 0.9rem 1.1rem;
-  font-weight: 600;
+  padding: 2.5rem 1.6rem;
+  text-align: center;
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
-.focus-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-.focus-dot-exploring { background: transparent; border: 1.5px solid var(--exploring); }
-.focus-node-active { border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); }
-.connector { display: flex; align-items: center; justify-content: center; color: var(--text-tertiary); padding-left: 0.55rem; }
-.arrow-v { display: inline; }
-.arrow-h { display: none; }
+.projects-empty p { margin-bottom: 0.4rem; }
+.projects-empty p:last-child { margin-bottom: 0; }
+.projects-empty a { color: var(--accent-strong); }
+.projects-empty a:hover { text-decoration: underline; }
 
 /* ---------- Timeline ---------- */
 .timeline {

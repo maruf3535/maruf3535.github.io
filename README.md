@@ -23,18 +23,19 @@ GitHub Pages.
 
 ## Content you should replace
 
-Everything below is either a placeholder or example data. Nothing fake was
-left in as if it were real — search for these and fill them in with your own
-information:
-
 1. **Projects — `js/projects.js`**
-   The `PROJECTS` array has three placeholder entries (one Public, one
-   Private, one Internal) showing the field shape. Replace `name`,
-   `description`, `role`, `tech`, `focus`, `status`, and `link` with your
-   actual projects. Delete entries you don't need, or copy the object shape
-   to add more. For Public projects, set `link` to the GitHub URL — the
-   "View repository" button only appears when `visibility` is `"Public"` and
-   `link` is set.
+   The `PROJECTS` array starts **empty on purpose**. Until you add real
+   projects, the Projects section shows an honest "write-ups are in
+   progress, see GitHub" message instead of fake example cards — a live
+   page full of bracketed placeholder text reads as broken, not modest.
+
+   To add a project, copy the `EXAMPLE_PROJECT` shape documented in the
+   comment at the top of the file into the `PROJECTS` array and fill in
+   `name`, `description`, `role`, `tech`, `focus`, `status`, and `link`.
+   For Public projects, set `link` to the GitHub URL — the "View
+   repository" button only appears when `visibility` is `"Public"` and
+   `link` is set. The empty state disappears automatically once the array
+   has at least one entry.
 
 2. **Contact section — `index.html`, inside `<section id="contact">`**
    Three rows are marked `contact-row-placeholder` with visible
@@ -88,6 +89,14 @@ pipeline needed.
 
 ## Design notes
 
+- **Seven sections, each saying one thing once.** About, Systems, Stack,
+  Projects, Journey, Leadership, Contact. There's no separate "Focus" or
+  "GitHub" section — the robotics/hardware direction lives in About and
+  the Journey timeline (where it's one real step among several, not its
+  own showcase), and the GitHub CTA lives inside Contact, since that's
+  already where it's needed. Earlier drafts had both as standalone
+  sections and it read as padding — the same three ideas restated five
+  different ways.
 - **Dark mode is the default and primary experience.** A light theme is
   available via the toggle in the header and persists in `localStorage`.
 - **No fabricated data.** Skill levels aren't shown as percentages or
