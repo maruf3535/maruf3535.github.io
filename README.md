@@ -16,8 +16,10 @@ GitHub Pages.
 │   ├── main.js            Theme toggle, mobile nav, scroll-reveal, active-link highlighting
 │   └── projects.js        Project data + rendering for the Projects section
 ├── assets/
-│   └── icons/
-│       └── favicon.svg   Browser tab icon
+│   ├── icons/
+│   │   └── favicon.svg   Browser tab icon
+│   └── images/
+│       └── profile.jpg  About-section portrait (cropped/compressed from the original upload)
 └── README.md
 ```
 
@@ -37,25 +39,9 @@ GitHub Pages.
    `link` is set. The empty state disappears automatically once the array
    has at least one entry.
 
-2. **Contact section — `index.html`, inside `<section id="contact">`**
-   Three rows are marked `contact-row-placeholder` with visible
-   `[ADD YOUR EMAIL]`, `[ADD YOUR LINKEDIN URL]`, and `[ADD ADDITIONAL LINK]`
-   text. For each one:
-   - Replace the `href="#"` with the real destination (`mailto:you@example.com`
-     for email, your LinkedIn URL, etc.)
-   - Replace the placeholder text with the real value
-   - Remove the `contact-row-placeholder` class and the `aria-disabled="true"`
-     attribute once it's a real link
-
-   There's an HTML comment directly above each row pointing this out.
-
-3. **GitHub link**
-   Already points to `https://github.com/maruf3535` throughout the site —
-   update this if your username changes.
-
-Nothing else needs to change to go live — everything else reflects the
-information provided when this site was built (current stack, working
-style, and the areas being explored).
+Everything else — About, the Contact section's email/academic-email/
+LinkedIn/Facebook rows, the GitHub links, and the profile photo — already
+reflects real information and doesn't need editing to go live.
 
 ## Local preview
 
@@ -70,22 +56,16 @@ python3 -m http.server 8000
 
 ## Deploying to GitHub Pages
 
-This repository is already named `personal-website` and can be published
-directly:
+The repository is `maruf3535/maruf3535.github.io` — that special name makes
+it a GitHub **user site**, served from the domain root rather than a
+project subpath. Pages is configured as: **Source → Deploy from a branch**,
+**Branch → `main`**, folder **`/ (root)`**.
 
-1. Push this branch's content to your default branch (e.g. `main`), or open
-   a pull request and merge it.
-2. In the repository on GitHub, go to **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **Deploy from a
-   branch**.
-4. Choose the branch (e.g. `main`) and the `/ (root)` folder, then **Save**.
-5. GitHub will publish the site at:
-   `https://maruf3535.github.io/personal-website/`
-   (it can take a minute or two after the first deploy).
+Live at: **https://maruf3535.github.io**
 
 Because everything is relative paths and there's no build step, every push
-to the published branch updates the live site automatically — no CI
-pipeline needed.
+to `main` updates the live site automatically — no CI pipeline needed. A
+deploy usually takes a minute or two to show up after a push.
 
 ## Design notes
 
@@ -101,9 +81,9 @@ pipeline needed.
   available via the toggle in the header and persists in `localStorage`.
 - **No fabricated data.** Skill levels aren't shown as percentages or
   progress bars, GitHub stats aren't faked, and there are no placeholder
-  testimonials or client logos. Where something is a placeholder, it's
-  visibly marked as one (dashed border + "placeholder" badge) rather than
-  looking like real content.
+  testimonials or client logos. The only spot without real content yet is
+  Projects, which shows an honest empty state (see above) rather than
+  fake example cards.
 - **Technologies still being learned** (Python, C++, OpenCV, Rust, Arduino,
   Robotics, SolidWorks) are visually distinguished from the established
   stack — dashed card border, amber "Learning / Exploring" styling — rather

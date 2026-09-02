@@ -299,7 +299,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .badge-learning { color: var(--exploring); border-color: color-mix(in srgb, var(--exploring) 45%, var(--border)); background: var(--exploring-soft); }
 .badge-current { color: var(--accent-strong); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); background: var(--accent-soft); }
-.badge-placeholder { color: var(--text-tertiary); }
 .badge-public { color: var(--accent-strong); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); background: var(--accent-soft); }
 .badge-private { color: var(--private); border-color: color-mix(in srgb, var(--private) 45%, var(--border)); background: var(--private-soft); }
 .badge-internal { color: var(--internal); border-color: color-mix(in srgb, var(--internal) 45%, var(--border)); background: var(--internal-soft); }
@@ -519,8 +518,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: border-color var(--dur) var(--ease);
 }
 .contact-row:hover { border-color: var(--accent); }
-.contact-row-placeholder { border-style: dashed; cursor: default; }
-.contact-row-placeholder:hover { border-color: var(--border-strong); }
 .contact-label { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.04em; }
 .contact-value { font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
 
