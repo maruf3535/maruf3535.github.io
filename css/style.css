@@ -510,7 +510,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 1rem 1.25rem;
@@ -518,8 +519,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: border-color var(--dur) var(--ease);
 }
 .contact-row:hover { border-color: var(--accent); }
-.contact-label { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.04em; }
-.contact-value { font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+.contact-label { flex-shrink: 0; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.04em; }
+.contact-value { min-width: 0; overflow-wrap: anywhere; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
 
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--border); padding: 2rem 0; }
