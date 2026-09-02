@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Breakpoint overrides. Base styles in style.css are mobile-first;
+   this file layers on refinements for wider viewports.
+   ========================================================================== */
+
+/* ---------- Tablet: 640px+ ---------- */
+@media (min-width: 640px) {
+  .hero-actions { flex-wrap: nowrap; }
+  .about-facts { padding: 1.75rem; }
+  .stack-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .github-panel { grid-template-columns: 1fr auto; }
+}
+
+/* ---------- Desktop: 900px+ ---------- */
+@media (min-width: 900px) {
+  .main-nav { display: block; }
+  .nav-toggle { display: none; }
+  .mobile-nav { display: none !important; }
+
+  .hero { padding: 8.5rem 0 6rem; }
+
+  .about-grid { grid-template-columns: 1.5fr 1fr; align-items: start; }
+
+  .stack-grid { grid-template-columns: repeat(4, 1fr); }
+  .stack-card-learning { grid-column: 1 / -1; }
+
+  .projects-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .focus-flow { flex-direction: row; align-items: stretch; }
+  .focus-node { flex: 1; flex-direction: column; text-align: center; gap: 0.5rem; padding: 1.4rem 1rem; }
+  .connector { padding-left: 0; padding-inline: 0.25rem; }
+  .arrow-v { display: none; }
+  .arrow-h { display: inline; }
+}
+
+/* ---------- Large desktop: 1200px+ ---------- */
+@media (min-width: 1200px) {
+  .hero-title { font-size: 3.6rem; }
+}
+
+/* Ensure the mobile nav toggle re-appears below the desktop breakpoint,
+   even though .icon-btn is display:inline-flex by default. */
+@media (max-width: 899px) {
+  .mobile-nav:not([hidden]) { display: block; }
+}

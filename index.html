@@ -1,12 +1,541 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maruf Hossain Rafsan — Software Engineer &amp; Technical Project Lead</title>
+<meta name="description" content="Maruf Hossain Rafsan — Software engineer working across backend, applications, databases, and cloud infrastructure, expanding into robotics and computer vision.">
+<meta name="theme-color" content="#0a0b0d">
+
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Maruf Hossain Rafsan — Software Engineer &amp; Technical Project Lead">
+<meta property="og:description" content="Building and understanding production systems across software, infrastructure, and applications — expanding into robotics and computer vision.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-  <h1>Welcome to My Personal Website</h1>
-  <p>This site is under construction. Check back soon!</p>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Maruf Hossain Rafsan — home">
+      <span class="brand-mark" aria-hidden="true">MHR</span>
+      <span class="brand-name">maruf3535</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#systems">Systems</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#focus">Focus</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="icon-btn" href="https://github.com/maruf3535" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">
+        <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      </a>
+      <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.3 2a9.9 9.9 0 1 0 9.7 12.1 8 8 0 0 1-9.7-12.1Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" hidden><path fill="currentColor" d="M12 4V2m0 20v-2M4 12H2m20 0h-2M5.6 5.6 4.2 4.2m15.6 15.6-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3 6h18v1.6H3zm0 5.2h18v1.6H3zm0 5.2h18V18H3z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#systems">Systems</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#focus">Focus</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">Software Engineer — Systems-Minded</p>
+      <h1 class="hero-title reveal">
+        Maruf Hossain Rafsan
+      </h1>
+      <p class="hero-role reveal">Software Engineer &amp; Technical Project Lead</p>
+      <p class="hero-statement reveal">
+        I work across the full stack of a production system — backend, applications, databases,
+        cloud infrastructure, and deployment — and I'm gradually expanding that scope into
+        robotics and computer vision.
+      </p>
+
+      <div class="hero-tags reveal" aria-label="Core technologies">
+        <span class="chip">Laravel / PHP</span>
+        <span class="chip">Flutter / Dart</span>
+        <span class="chip">SQL</span>
+        <span class="chip">AWS / EC2</span>
+        <span class="chip">Linux / Ubuntu</span>
+        <span class="chip chip-exploring">Exploring: Robotics</span>
+      </div>
+
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-outline" href="https://github.com/maruf3535" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <p class="eyebrow reveal">01 — About</p>
+      <h2 class="section-title reveal" id="about-title">Building real systems, not just learning technologies</h2>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            I'm interested in building real systems — not just learning isolated technologies
+            one at a time. My work has increasingly pulled me into backend development, mobile
+            and web applications, databases, cloud infrastructure, Linux servers, deployment,
+            and coordinating technical work with a team.
+          </p>
+          <p>
+            Most of what I do now involves understanding how a production system actually
+            behaves — not just writing a feature, but understanding how it's built, deployed,
+            maintained, and improved over time. That currently means working with Laravel/PHP
+            backends and Flutter/Dart applications on top of SQL databases, and moving systems
+            that started on shared hosting toward AWS EC2 environments running on Ubuntu Linux.
+          </p>
+          <p>
+            The more I work across these layers, the more interested I've become in the
+            boundary between software and physical systems. That's part of why I've started
+            exploring robotics, embedded systems, computer vision, electronics, and systems
+            programming — early steps, but a direction I'm serious about.
+          </p>
+        </div>
+
+        <aside class="about-facts reveal" aria-label="At a glance">
+          <div class="fact">
+            <span class="fact-label">Currently working with</span>
+            <span class="fact-value">Laravel · Flutter · SQL · AWS · Linux</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Also doing</span>
+            <span class="fact-value">Technical &amp; project coordination</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Expanding into</span>
+            <span class="fact-value">Robotics · Embedded systems · Computer vision</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">GitHub</span>
+            <span class="fact-value"><a href="https://github.com/maruf3535" target="_blank" rel="noopener noreferrer">github.com/maruf3535</a></span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SYSTEMS THINKING ============ -->
+  <section class="section section-alt" id="systems" aria-labelledby="systems-title">
+    <div class="container">
+      <p class="eyebrow reveal">02 — How I Think About Systems</p>
+      <h2 class="section-title reveal" id="systems-title">
+        I don't just want to write code. I want to understand the whole system.
+      </h2>
+      <p class="section-lead reveal">
+        A feature is never just a feature — it's one piece of something bigger: an interface,
+        a backend service, a database, a server, and everything that keeps it running. I'm
+        interested in how these layers connect, and how a real system is designed, deployed,
+        and kept alive in production.
+      </p>
+
+      <p class="diagram-caption reveal">Layers I think about, in general:</p>
+      <div class="chip-row reveal" role="list" aria-label="General system layers">
+        <span class="chip chip-flow" role="listitem">User</span>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="chip chip-flow" role="listitem">Application</span>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="chip chip-flow" role="listitem">Backend</span>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="chip chip-flow" role="listitem">Database</span>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="chip chip-flow" role="listitem">Infrastructure</span>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="chip chip-flow" role="listitem">Deployment</span>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <span class="chip chip-flow" role="listitem">Monitoring / Operations</span>
+      </div>
+
+      <p class="diagram-caption reveal" style="margin-top: 3rem;">
+        In practice, on a typical Laravel / Flutter project, that looks something like this:
+      </p>
+
+      <div class="flow-diagram reveal" role="list" aria-label="Example system architecture">
+        <div class="flow-step" role="listitem">
+          <span class="flow-index">01</span>
+          <span class="flow-label">Client / User</span>
+        </div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-step" role="listitem">
+          <span class="flow-index">02</span>
+          <span class="flow-label">Flutter / Web Application</span>
+        </div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-step" role="listitem">
+          <span class="flow-index">03</span>
+          <span class="flow-label">Laravel Backend</span>
+        </div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-step" role="listitem">
+          <span class="flow-index">04</span>
+          <span class="flow-label">SQL Database</span>
+        </div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-step" role="listitem">
+          <span class="flow-index">05</span>
+          <span class="flow-label">AWS / Linux Infrastructure</span>
+        </div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-step" role="listitem">
+          <span class="flow-index">06</span>
+          <span class="flow-label">Deployment &amp; Operations</span>
+        </div>
+      </div>
+
+      <p class="diagram-note reveal">
+        Note: this isn't the architecture of every project — it's an illustration of the kind
+        of system I work with and want to understand more deeply, end to end.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ TECHNICAL STACK ============ -->
+  <section class="section" id="stack" aria-labelledby="stack-title">
+    <div class="container">
+      <p class="eyebrow reveal">03 — Technical Stack</p>
+      <h2 class="section-title reveal" id="stack-title">What I work with</h2>
+      <p class="section-lead reveal">
+        Organized by where it sits in a system, not as a logo wall. The last category is
+        clearly separate — technologies I'm actively learning, not ones I'd call myself
+        established in.
+      </p>
+
+      <div class="stack-grid">
+        <div class="stack-card reveal">
+          <span class="stack-index">01</span>
+          <h3>Application Development</h3>
+          <div class="chip-row">
+            <span class="chip">Laravel</span>
+            <span class="chip">PHP</span>
+            <span class="chip">Flutter</span>
+            <span class="chip">Dart</span>
+          </div>
+        </div>
+
+        <div class="stack-card reveal">
+          <span class="stack-index">02</span>
+          <h3>Data</h3>
+          <div class="chip-row">
+            <span class="chip">SQL</span>
+            <span class="chip">Relational Database Design</span>
+            <span class="chip">Database Architecture</span>
+          </div>
+        </div>
+
+        <div class="stack-card reveal">
+          <span class="stack-index">03</span>
+          <h3>Cloud &amp; Infrastructure</h3>
+          <div class="chip-row">
+            <span class="chip">AWS</span>
+            <span class="chip">EC2</span>
+            <span class="chip">Linux</span>
+            <span class="chip">Ubuntu</span>
+            <span class="chip">Deployment</span>
+          </div>
+        </div>
+
+        <div class="stack-card reveal">
+          <span class="stack-index">04</span>
+          <h3>Engineering Workflow</h3>
+          <div class="chip-row">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Codebase Management</span>
+            <span class="chip">Project Structure</span>
+          </div>
+        </div>
+
+        <div class="stack-card stack-card-learning reveal">
+          <span class="stack-index">05</span>
+          <div class="stack-card-head">
+            <h3>Expanding Into</h3>
+            <span class="badge badge-learning">Learning / Exploring</span>
+          </div>
+          <div class="chip-row">
+            <span class="chip chip-exploring">Python</span>
+            <span class="chip chip-exploring">C++</span>
+            <span class="chip chip-exploring">OpenCV</span>
+            <span class="chip chip-exploring">Rust</span>
+            <span class="chip chip-exploring">Arduino</span>
+            <span class="chip chip-exploring">Robotics</span>
+            <span class="chip chip-exploring">SolidWorks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <p class="eyebrow reveal">04 — Projects</p>
+      <h2 class="section-title reveal" id="projects-title">Selected work</h2>
+      <p class="section-lead reveal">
+        A mix of production, internal, and private work. Public repositories are linked where
+        available. Private and internal projects are described without exposing confidential
+        details.
+      </p>
+
+      <div class="projects-grid" id="projects-grid" aria-live="polite">
+        <!-- Populated by js/projects.js -->
+      </div>
+
+      <p class="projects-note reveal">
+        <strong>Note for the site owner:</strong> project data lives in
+        <code>js/projects.js</code>. Replace the placeholder entries with real projects —
+        see the comments in that file for the exact fields to fill in.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CURRENT FOCUS ============ -->
+  <section class="section" id="focus" aria-labelledby="focus-title">
+    <div class="container">
+      <p class="eyebrow reveal">05 — Currently Exploring</p>
+      <h2 class="section-title reveal" id="focus-title">
+        Expanding from software into robotics, hardware, and computer vision
+      </h2>
+      <p class="section-lead reveal">
+        I'm starting to explore robotics with a small team. The plan is to start with Arduino
+        and gradually build knowledge across embedded systems, electronics, computer vision,
+        and systems programming — alongside the software engineering work I already do. This
+        is an emerging area for me, not an established one.
+      </p>
+
+      <div class="focus-flow reveal" role="list" aria-label="Direction of expansion">
+        <div class="focus-node focus-node-active" role="listitem">
+          <span class="focus-dot" aria-hidden="true"></span>
+          <span>Software Engineering</span>
+        </div>
+        <span class="connector"><span class="arrow-h" aria-hidden="true">→</span><span class="arrow-v" aria-hidden="true">↓</span></span>
+        <div class="focus-node focus-node-active" role="listitem">
+          <span class="focus-dot" aria-hidden="true"></span>
+          <span>Systems &amp; Infrastructure</span>
+        </div>
+        <span class="connector"><span class="arrow-h" aria-hidden="true">→</span><span class="arrow-v" aria-hidden="true">↓</span></span>
+        <div class="focus-node" role="listitem">
+          <span class="focus-dot focus-dot-exploring" aria-hidden="true"></span>
+          <span>Robotics</span>
+        </div>
+        <span class="connector"><span class="arrow-h" aria-hidden="true">→</span><span class="arrow-v" aria-hidden="true">↓</span></span>
+        <div class="focus-node" role="listitem">
+          <span class="focus-dot focus-dot-exploring" aria-hidden="true"></span>
+          <span>Computer Vision</span>
+        </div>
+        <span class="connector"><span class="arrow-h" aria-hidden="true">→</span><span class="arrow-v" aria-hidden="true">↓</span></span>
+        <div class="focus-node" role="listitem">
+          <span class="focus-dot focus-dot-exploring" aria-hidden="true"></span>
+          <span>Embedded Systems</span>
+        </div>
+      </div>
+
+      <p class="diagram-caption reveal" style="margin-top:2.5rem;">Currently exploring:</p>
+      <div class="chip-row reveal">
+        <span class="chip chip-exploring">Arduino</span>
+        <span class="chip chip-exploring">Embedded Systems</span>
+        <span class="chip chip-exploring">C / C++</span>
+        <span class="chip chip-exploring">Computer Vision</span>
+        <span class="chip chip-exploring">OpenCV</span>
+        <span class="chip chip-exploring">Electronics</span>
+        <span class="chip chip-exploring">CAD / SolidWorks</span>
+        <span class="chip chip-exploring">Rust</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <section class="section section-alt" id="journey" aria-labelledby="journey-title">
+    <div class="container">
+      <p class="eyebrow reveal">06 — Journey</p>
+      <h2 class="section-title reveal" id="journey-title">How this is progressing</h2>
+      <p class="section-lead reveal">
+        Shown as a progression, not a timeline of dates — this is about direction, not years.
+      </p>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <h3>Software Development</h3>
+            <p>Where it started — writing code and learning how applications are built.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <h3>Backend &amp; Applications</h3>
+            <p>Working with Laravel/PHP and Flutter/Dart to build real, used applications.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <h3>Databases &amp; Architecture</h3>
+            <p>Understanding data modeling, relationships, and how database design shapes a system.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <h3>Cloud &amp; Infrastructure</h3>
+            <p>Moving systems from shared hosting toward AWS EC2 on Ubuntu Linux, and understanding deployment.</p>
+          </div>
+        </li>
+        <li class="timeline-item timeline-item-current reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <h3>Technical Leadership <span class="badge badge-current">Current</span></h3>
+            <p>Coordinating development work, planning technical decisions, and connecting requirements with implementation.</p>
+          </div>
+        </li>
+        <li class="timeline-item timeline-item-exploring reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <h3>Robotics &amp; Embedded Systems <span class="badge badge-learning">Exploring</span></h3>
+            <p>Starting with Arduino and a small team, building toward embedded systems and electronics.</p>
+          </div>
+        </li>
+        <li class="timeline-item timeline-item-exploring reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <h3>Computer Vision <span class="badge badge-learning">Exploring</span></h3>
+            <p>The next layer once the embedded and hardware fundamentals are in place.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ LEADERSHIP ============ -->
+  <section class="section" id="leadership" aria-labelledby="leadership-title">
+    <div class="container">
+      <p class="eyebrow reveal">07 — Leadership</p>
+      <h2 class="section-title reveal" id="leadership-title">Not only writing code</h2>
+      <p class="section-lead reveal">
+        Alongside hands-on development, I work on the coordination and infrastructure side of
+        running real systems.
+      </p>
+
+      <ul class="leadership-list">
+        <li class="reveal"><span class="check" aria-hidden="true">›</span>Understanding and navigating existing codebases</li>
+        <li class="reveal"><span class="check" aria-hidden="true">›</span>Coordinating development work across a team</li>
+        <li class="reveal"><span class="check" aria-hidden="true">›</span>Translating business requirements into technical decisions</li>
+        <li class="reveal"><span class="check" aria-hidden="true">›</span>Planning and prioritizing technical work</li>
+        <li class="reveal"><span class="check" aria-hidden="true">›</span>Managing production systems and deployments</li>
+        <li class="reveal"><span class="check" aria-hidden="true">›</span>Making architecture-level decisions</li>
+        <li class="reveal"><span class="check" aria-hidden="true">›</span>Handling IT and infrastructure responsibilities</li>
+        <li class="reveal"><span class="check" aria-hidden="true">›</span>Connecting business needs with technical implementation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ GITHUB ============ -->
+  <section class="section section-alt" id="github" aria-labelledby="github-title">
+    <div class="container">
+      <div class="github-panel reveal">
+        <div>
+          <p class="eyebrow">08 — GitHub</p>
+          <h2 class="section-title" id="github-title">Code, experiments, and engineering work.</h2>
+          <p class="section-lead" style="margin-bottom:0;">
+            The most accurate, up-to-date picture of what I'm working on lives on GitHub —
+            repositories and activity are best viewed directly there rather than restated here.
+          </p>
+        </div>
+        <a class="btn btn-primary btn-large" href="https://github.com/maruf3535" target="_blank" rel="noopener noreferrer">
+          @maruf3535 on GitHub ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <p class="eyebrow reveal">09 — Contact</p>
+      <h2 class="section-title reveal" id="contact-title">Get in touch</h2>
+      <p class="section-lead reveal">
+        Open to conversations about engineering, systems, and collaboration.
+      </p>
+
+      <div class="contact-grid reveal">
+        <a class="contact-row" href="https://github.com/maruf3535" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/maruf3535 ↗</span>
+        </a>
+
+        <!-- Site owner: replace href="mailto:..." and the visible text below with your real email -->
+        <a class="contact-row contact-row-placeholder" href="#" aria-disabled="true">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">[ADD YOUR EMAIL] <span class="badge badge-placeholder">placeholder</span></span>
+        </a>
+
+        <!-- Site owner: replace href="#" with your real LinkedIn URL -->
+        <a class="contact-row contact-row-placeholder" href="#" aria-disabled="true">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">[ADD YOUR LINKEDIN URL] <span class="badge badge-placeholder">placeholder</span></span>
+        </a>
+
+        <!-- Site owner: use this row for a portfolio site, X/Twitter, or any other professional link -->
+        <a class="contact-row contact-row-placeholder" href="#" aria-disabled="true">
+          <span class="contact-label">Other</span>
+          <span class="contact-value">[ADD ADDITIONAL LINK] <span class="badge badge-placeholder">placeholder</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> Maruf Hossain Rafsan</p>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
